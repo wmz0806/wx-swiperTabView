@@ -1,0 +1,44 @@
+<view class="stv_container stv_box">
+
+    <!--tabs-->
+    <view class="stv_row stv_tabs {{stvTabBottom ? 'stv_tabs_bottom' : 'stv_tabs_top'}}" style="height: {{stvTabHeight || '100'}}{{stvTabHeightUnit || 'rpx'}}">
+        <view class="stv_col stv_tab_item" wx:key="_stv_tabs" wx:for="{{stvTabs}}" wx:for-index="idx" wx:for-item="tab">
+            <button class="stv_tab_btn {{idx == stvCurrent || (idx == 0 && !stvCurrent) ? 'stv_active' : ''}}" data-index="{{idx}}" bindtap="stvOnTabTap">{{tab}}</button>
+        </view>
+        <view hidden="{{stvHiddenTabLine}}" class="stv_line {{stvTabBottom ? 'stv_line_top' : 'stv_line_bottom'}} {{stvAnimateLine ? 'animate': ''}}" style="width: {{stvLineWidth}}px;left: {{stvOffset}}px"></view>
+    </view>
+
+    <!--内容-->
+    <swiper class="stv_swiper stv_box {{stvTabBottom ? 'has_stv_footer' :  'has_stv_header'}}" indicator-dots="{{stvIndicatorDots}}" autoplay="{{stvAutoplay}}"
+            interval="{{stvInterval}}" duration="{{stvDuration}}" current="{{stvCurrent || 0}}" circular="{{stvLoop}}" bindchange="stvOnChange"
+            bindtouchstart="stvOnTouchStart" bindtouchend="stvOnTouchEnd"
+        >
+        <!--内容1-->
+        <swiper-item bindtouchmove="stvOnTouchMove" class="stv_swiper_item stv_box" style="background: yellow;">
+            <view>
+                <view style="width: 100px;height:100px;">顶部文本1</view>
+                <view style="width: 100px;height:100px;" wx:key="stv1" wx:for="{{[0,1,2,3,4,5,6,7,8,9]}}">文本</view>
+                <view style="width: 100px;height:100px;">底部文本1</view>
+            </view>
+        </swiper-item>
+
+        <!--内容2-->
+        <swiper-item bindtouchmove="stvOnTouchMove" class="stv_swiper_item stv_box" style="background: red">
+            <view>
+                <view style="width: 100px;height:100px;">顶部文本2</view>
+                <view style="width: 100px;height:100px;" wx:key="stv2" wx:for="{{[0,1,2,3,4,5,6,7,8,9]}}">文本2</view>
+                <view style="width: 100px;height:100px;">底部文本2</view>
+            </view>
+        </swiper-item>
+
+        <!--内容3-->
+        <swiper-item bindtouchmove="stvOnTouchMove" class="stv_swiper_item stv_box" style="background: green">
+            <view>
+                <view style="width: 100px;height:100px;">顶部文本3</view>
+                <view style="width: 100px;height:100px;" wx:key="stv3" wx:for="{{[0,1,2,3,4,5,6,7,8,9]}}">文本3</view>
+                <view style="width: 100px;height:100px;">底部文本3</view>
+            </view>
+        </swiper-item>
+    </swiper>
+
+</view>

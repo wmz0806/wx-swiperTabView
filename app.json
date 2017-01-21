@@ -1,0 +1,8 @@
+{
+  "pages":[
+    "pages/swiperTabView/index"
+  ],
+  "window":{
+    "navigationBarTitleText": "哈哈哈"
+  }
+}
