@@ -1,8 +1,10 @@
 # wx-swiperTabView
-微信小程序可滑动得tab-view 可以左右滑动可以上下滑动可以下拉刷新
+微信小程序可滑动得 tab-view 可以完美的左右滑动和上下滑动 可以下拉刷新
 
-参考了[wx-scrollable-tab-view](https://github.com/zhongjie-chen/wx-scrollable-tab-view)不过如果有列表
-这个就行不通了所以这个swiperTabView就诞生了。
+参考了很多其他的tab不过都算有瑕疵， 要么是能左右滚动不能上下滚动，要么就是滚动过程中既可以左右滚动也可以
+上下滚动
+
+所以这个swiperTabView就诞生了。
 
 具体原理就是使用原生swiper控制左右滑动 原生滚动控制上下。
 
