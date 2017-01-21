@@ -12,6 +12,8 @@
 }
 
 .stv_swiper_item{
+    overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
     overflow: auto;
 }
 
